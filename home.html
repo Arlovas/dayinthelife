@@ -13,31 +13,134 @@
   	<style type="text/css" media="screen">
   		.post-link >img {
   			width: 100%;
-  			margin-bottom: 20px;
+  			/*margin-bottom: 20px;*/
   		}
+      .title-post{
+        text-align: center;
+      }
+
+.post-thumb{
+        width: 100%;
+
+}
+.post-thumb:hover{
+    /*-webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);*/
+    /*box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);*/
+
+    /*-webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);*/
+    /*box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);*/
+
+        -webkit-box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+}
+
+
+
+/* Container holding the image and the text */
+.post-link {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.post-title-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    background: rgba(0, 0, 0, 0.34);
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    /*display: none;*/
+}
+.post-title-centered:hover{
+  display: block !important;
+}
+
+.teste{
+  height: 100%
+}
+
+
+@media only screen and (min-width: 900px) {
+  .brand-logo{
+    padding-left: 50px !important;
+  }
+}
+
+
+
+
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+
+
+
   	</style>
 </head>
 <body>
 
-
+<header>
   <nav>
-    <div class="nav-wrapper">
-  		<a href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper teal lighten-2">
+  		<a href="#" class="brand-logo">Day in the life</a>
       <form style="width: 50%;display: inline-block;">
-        <div style="left: 100px"; class="input-field">
-          <input style="height: 45px;line-height: 45px;border-radius: 3px;" id="search" type="search" required>
-          <label class="label-icon" for="search"><i style="height: 45px;line-height: 45px;" class="material-icons">search</i></label>
-          <i style="height: 45px;line-height: 45px;" class="material-icons">close</i>
-        </div>
+        <!-- <div style="left: 210px"; class="input-field"> -->
+          <!-- <input style="height: 45px;line-height: 45px;border-radius: 3px;" id="search" type="search" required> -->
+          <!-- <label class="label-icon" for="search"><i style="height: 45px;line-height: 45px;" class="material-icons">search</i></label> -->
+          <!-- <i style="height: 45px;line-height: 45px;" class="material-icons">close</i> -->
+        <!-- </div> -->
       </form>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <!-- <li><a href="sass.html">Sass</a></li> -->
+        <!-- <li><a href="badges.html">Components</a></li> -->
+        <!-- <li><a href="collapsible.html">JavaScript</a></li> -->
       </ul>
     </div>
   </nav>
-
+</header>
+<main>
   <div class="container">
     <div class="row">
     	<div class="col s12">
@@ -50,34 +153,90 @@
     	</div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-    	<!-- <div class="col s4 post-link"><img src="thumbnail/begin.jpg" alt=""></div> -->
-    	<!-- <div class="col s4 post-link"><img src="thumbnail/canyon.jpg" alt=""></div> -->
-    	<div class="col s4 post-link">
-    		<img src="thumbnail/begin.jpg" alt="">
-    		<img src="thumbnail/chuva.jpg" alt="">
-    		<img src="thumbnail/canyon.jpg" alt="">
-    	</div>
-    	<div class="col s4 post-link">
-    		<img src="thumbnail/canyon.jpg" alt="">
-    		<img src="thumbnail/begin.jpg" alt="">
-    		<img src="thumbnail/chuva.jpg" alt="">
+    <div class="container">
+        <div class="row">
+            <!-- posts -->
+            <div class="col s12 m6 l4">
+                
+                <!-- post -->
+                <a href="resolucoes.html" title="">
+                    <div class=" post-link">
+                        <img class="post-thumb" src="thumbnail/newyear.jpg" alt="">
+                        <!-- <div class="bottom-left">Bottom Left</div> -->
+                        <!-- <div class="top-left">Top Left</div> -->
+                        <!-- <div class="top-right">Top Right</div> -->
+                        <!-- <div class="bottom-right">Bottom Right</div> -->
+                        
+                        <div class="teste">
+                            <div class="post-title-centered">Resolução para 2018</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- end post -->
 
-    	</div>
-    	<div class="col s4 post-link">
-    		<img src="thumbnail/chuva.jpg" alt="">
-    		<img src="thumbnail/canyon.jpg" alt="">
-    		<img src="thumbnail/begin.jpg" alt="">
 
-    	</div>
-    	<!-- <div class="col s4 post-link"><img src="thumbnail/canyon.jpg" alt=""></div> -->
-    	<!-- <div class="col s4 post-link"><img src="thumbnail/chuva.jpg" alt=""></div> -->
-    	<div class="
+            </div>
 
-    	col s4 post-link"><img src="thumbnail/chuva.jpg" alt=""></div>
+        	<div class="col s12 m6 l4 post-link">
+                <!-- post -->
+                <a href="resolucoes.html" title="">
+                    <div class=" post-link">
+                        <img class="post-thumb" src="thumbnail/apresentacao.jpg" alt="">
+                        <!-- <div class="bottom-left">Bottom Left</div> -->
+                        <!-- <div class="top-left">Top Left</div> -->
+                        <!-- <div class="top-right">Top Right</div> -->
+                        <!-- <div class="bottom-right">Bottom Right</div> -->
+                        
+                        <div class="teste">
+                            <div class="post-title-centered">Ariza ou Lutur?</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- end post -->
+        	</div>
+
+        	<div class="col s12 m6 l4 post-link">
+        	</div>
 		</div>
-  </div>
+    </div>
+</main>
+<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by the beautiful hands of Artur >>> <a class="brown-text text-lighten-3" target="blank" href="https://twitter.com/arturcomunello">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+
 
 
 </body>
